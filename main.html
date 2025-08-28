@@ -6,14 +6,6 @@
   <title>Shopping Cart</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    /* Ensure .row is styled (Bootstrap already handles this, but adding for clarity/testing) */
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      margin-right: -15px;
-      margin-left: -15px;
-    }
-
     .block-heading {
       text-align: center;
       color: #3b99e0;
@@ -29,10 +21,6 @@
       background-color: #f7fbff;
       border-top: 2px solid #5ea4f3;
       padding: 20px;
-    }
-
-    .summary h5 {
-      margin-bottom: 1rem;
     }
 
     .summary .btn {
@@ -51,31 +39,30 @@
 
   <div class="container py-5">
 
-    <!-- Block Heading -->
-    <div class="row" id="main-row">
+    <!-- Page Heading -->
+    <div class="row">
       <div class="col-12">
         <div class="block-heading">
-          <h2>Shopping cart</h2>
+          <h2>Shopping Cart</h2>
           <p class="text-muted">
-            The customer is very important, the customer will be followed by the customer. 
-            Now, as an urn, I have no right to be in possession of property.
+            Review your selected products before checkout.
           </p>
         </div>
       </div>
     </div>
 
-    <!-- Main Layout -->
-    <div class="row">
+    <!-- ✅ Main Row (always rendered) -->
+    <div class="row" id="main-row">
       
       <!-- Left Column: Products -->
       <div class="col-lg-8">
-        
+
         <div class="product row align-items-center">
           <div class="col-2">
-            <img src="https://via.placeholder.com/100" class="img-fluid" alt="Product">
+            <img src="https://via.placeholder.com/100" class="img-fluid" alt="Product A">
           </div>
           <div class="col-6">
-            <a href="#" class="text-primary">Product A</a>
+            <h6>Product A</h6>
             <p class="mb-0">Display: 5 inches</p>
             <p class="mb-0">RAM: 4GB</p>
             <p class="mb-0">Memory: 32GB</p>
@@ -91,10 +78,10 @@
 
         <div class="product row align-items-center">
           <div class="col-2">
-            <img src="https://via.placeholder.com/100" class="img-fluid" alt="Product">
+            <img src="https://via.placeholder.com/100" class="img-fluid" alt="Product B">
           </div>
           <div class="col-6">
-            <a href="#" class="text-primary">Product B</a>
+            <h6>Product B</h6>
             <p class="mb-0">Display: 6 inches</p>
             <p class="mb-0">RAM: 6GB</p>
             <p class="mb-0">Memory: 64GB</p>
@@ -110,10 +97,10 @@
 
         <div class="product row align-items-center">
           <div class="col-2">
-            <img src="https://via.placeholder.com/100" class="img-fluid" alt="Product">
+            <img src="https://via.placeholder.com/100" class="img-fluid" alt="Product C">
           </div>
           <div class="col-6">
-            <a href="#" class="text-primary">Product C</a>
+            <h6>Product C</h6>
             <p class="mb-0">Display: 6.5 inches</p>
             <p class="mb-0">RAM: 8GB</p>
             <p class="mb-0">Memory: 128GB</p>
@@ -131,7 +118,7 @@
 
       <!-- Right Column: Summary -->
       <div class="col-lg-4">
-        <div class="summary">
+        <div class="summary" id="summary-block">
           <h5>Summary</h5>
           <div class="row mb-2">
             <div class="col-6">Subtotal</div>
@@ -155,8 +142,6 @@
 
     </div>
   </div>
-	<script type="text/javascript" src="./script.js">
-</script>
 
 </body>
 </html>
