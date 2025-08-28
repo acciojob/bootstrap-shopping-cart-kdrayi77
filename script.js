@@ -1,1 +1,1 @@
-//your JS code here. If required.
+cy.get('.row', { timeout: 10000 }).should('exist');
